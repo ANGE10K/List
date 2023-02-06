@@ -31,6 +31,7 @@ public class MyList<T> {
       obj[countObj] = o;
       countObj++;
   }
+   //TODO removeObjectAtIndex - написать этот метод и под капотом removeObject должен он вызываться по найденному индексу. 
   public void removeObject(T o) {
       for (int i = 0; i < countObj; i++) {
           if (obj[i].equals(o)) {
