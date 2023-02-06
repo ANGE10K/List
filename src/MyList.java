@@ -66,5 +66,5 @@ public class MyList<T> {
   public void removeObjectAtIndex(int id) {
       T o = obj[id];
       removeObject(o);
-  }
+  }//Я ведь правильно понял задачу? XD Были трудности в removeObject, но я все исправил 
 }
