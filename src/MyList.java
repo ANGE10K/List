@@ -6,12 +6,18 @@ public class MyList<T> {
   private int countObj = 0;
   public static void main(String[] args) {
       MyList<Integer> myList = new MyList<>();
-
       myList.addObject(1);
       myList.addObject(2);
-
-      myList.revers();
-      List<Integer> list = new ArrayList<>();
+      myList.addObject(3);
+      myList.addObject(4);
+      myList.addObject(5);
+      myList.addObject(6);
+      myList.addObject(7);
+      myList.removeObjectAtIndex(6);
+      myList.removeObjectAtIndex(2);
+      for (int i = 0; i < myList.countObj; i++) {
+          System.out.println(myList.getObject(i));
+      }
 
   }
   public void addObject(T o) {
@@ -32,6 +38,7 @@ public class MyList<T> {
                   obj[j] = obj[j + 1];
               }
               obj[countObj - 1] = null;
+              countObj--;
           }
       }
   }
@@ -54,5 +61,9 @@ public class MyList<T> {
   }
   public int size() {
       return countObj;
+  }
+  public void removeObjectAtIndex(int id) {
+      T o = obj[id];
+      removeObject(o);
   }
 }
